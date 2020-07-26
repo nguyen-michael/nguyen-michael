@@ -1,5 +1,5 @@
 import React from "react"
-import { Link } from "gatsby"
+import { Link, graphql } from "gatsby"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -7,7 +7,8 @@ import Button from "../components/button"
 
 class IndexPage extends React.Component {
   render() {
-    const siteTitle = "Gatsby Starter Personal Website"
+    const { data } = this.props
+    const siteTitle = data.site.siteMetadata.title
 
     return (
       <Layout location={this.props.location} title={siteTitle}>
@@ -17,17 +18,14 @@ class IndexPage extends React.Component {
         />
         <img style={{ margin: 0 }} src="./GatsbyScene.svg" alt="Gatsby Scene" />
         <h1>
-          Hey people{" "}
+          Greetings{" "}
           <span role="img" aria-label="wave emoji">
             👋
           </span>
         </h1>
-        <p>Welcome to your new Gatsby website. You are on your home page.</p>
         <p>
-          This starter comes out of the box with styled components and Gatsby's
-          default starter blog running on Netlify CMS.
+          Here is where We'll add components for the main index page, such as a hero, an about section, latest projects, contact call to action and links to blog and projects page.
         </p>
-        <p>Now go build something great!</p>
         <Link to="/blog/">
           <Button marginTop="35px">Go to Blog</Button>
         </Link>
@@ -37,3 +35,13 @@ class IndexPage extends React.Component {
 }
 
 export default IndexPage
+
+export const pageQuery = graphql`
+  query IndexPageData {
+    site {
+      siteMetadata {
+        title
+      }
+    }
+  }
+`
