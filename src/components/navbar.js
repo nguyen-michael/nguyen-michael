@@ -9,7 +9,7 @@ class Navbar extends React.Component {
     return (
       <Wrapper>
         <Title>
-          <Link to="/">Hello</Link>
+          <Link to="/">Michael Nguyen</Link>
         </Title>
         <div>
           <Link to="/blog">Blog</Link>
