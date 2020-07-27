@@ -13,8 +13,9 @@ aboutSkills:
   - Skill 2
   - Third Skill
   - More Skills
+aboutResume: resume link goes here
 projectsTitle: Latest Work
-contactTitle: Contact me
-contactCallToAction: Let's Discuss Business
-contactEmail: howdy@nguyenmichael.dev
+contactTitle: Contact Me
+contactCallToAction: Let's Talk Business
+contactEmail: howdy at nguyenmichael.dev
 ---

@@ -1,9 +1,12 @@
 import React from "react"
-import { Link, graphql } from "gatsby"
+import { graphql } from "gatsby"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import Button from "../components/button"
+import Hero from "../components/hero"
+import About from "../components/about"
+import Projects from "../components/projects"
+import Contact from "../components/contact"
 
 class IndexPage extends React.Component {
   render() {
@@ -16,19 +19,10 @@ class IndexPage extends React.Component {
           title="Home"
           keywords={[`blog`, `gatsby`, `javascript`, `react`]}
         />
-        <img style={{ margin: 0 }} src="./GatsbyScene.svg" alt="Gatsby Scene" />
-        <h1>
-          Greetings{" "}
-          <span role="img" aria-label="wave emoji">
-            👋
-          </span>
-        </h1>
-        <p>
-          Here is where We'll add components for the main index page, such as a hero, an about section, latest projects, contact call to action and links to blog and projects page.
-        </p>
-        <Link to="/blog/">
-          <Button marginTop="35px">Go to Blog</Button>
-        </Link>
+        <Hero />
+        <About />
+        <Projects />
+        <Contact />
       </Layout>
     )
   }
