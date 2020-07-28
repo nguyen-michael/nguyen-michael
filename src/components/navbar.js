@@ -22,7 +22,7 @@ class Navbar extends React.Component {
 
 const Wrapper = styled.div`
   display: flex;
-  height: ${rhythm(3)};
+  height: ${rhythm(2)};
   justify-content: space-between;
 `
 
