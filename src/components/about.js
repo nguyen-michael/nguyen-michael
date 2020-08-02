@@ -17,8 +17,10 @@ export default function About() {
             }
           }
           aboutSkills
-          aboutResume
         }
+      }
+      file(name: {eq: "michael-nguyen-resume"}, relativePath: {}) {
+        publicURL
       }
     }
   `)
@@ -27,14 +29,17 @@ export default function About() {
     aboutBlurb,
     aboutImage,
     aboutSkills,
-    aboutResume,
   } = data.mdx.frontmatter
+
+  const {
+    publicURL
+  } = data.file
 
   return (
     <Section id="about">
       <div>
         <p>{aboutBlurb}</p>
-        <p>{aboutResume}</p>
+        <a href={publicURL} target="_blank">Resume</a>
       </div>
       <div>
         <SkillsList>

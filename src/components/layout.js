@@ -33,6 +33,7 @@ class Layout extends React.Component {
 }
 
 const Wrapper = styled.div`
+  background-color: #fcfdf7;
   min-height: 100vh;
   display: flex;
   flex-direction: column;

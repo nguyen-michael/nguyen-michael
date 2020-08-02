@@ -5,7 +5,7 @@ hidden: false
 pageKey: index
 heroName: Michael Nguyen
 heroJobTitle: Full Stack Web Developer
-heroJumbotron: "../assets/great.jpg"
+heroJumbotron: "../assets/jumbotron-hero.webp"
 aboutImage: "../assets/great2.jpg"
 aboutBlurb: I am me, i do web stuff. Bikes are cool!
 aboutSkills:
@@ -13,7 +13,6 @@ aboutSkills:
   - Skill 2
   - Third Skill
   - More Skills
-aboutResume: resume link goes here
 projectsTitle: Latest Work
 contactTitle: Contact Me
 contactCallToAction: Let's Talk Business
