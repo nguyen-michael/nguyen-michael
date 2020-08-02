@@ -1,5 +1,5 @@
 import React from "react"
-import { Link, useStaticQuery, graphql } from "gatsby"
+import { useStaticQuery, graphql } from "gatsby"
 import styled from "styled-components"
 
 export default function Contact() {
@@ -36,8 +36,13 @@ export default function Contact() {
       <h1>{contactTitle}</h1>
       <h2>{contactCallToAction}</h2>
       <h3>{contactEmail}</h3>
-      <p>Find me on <Link to={`https://www.linkedin.com/in/${linkedin}`}>LinkedIn</Link></p>
-      <p>Find me on <Link to={`https://www.github.com/${github}`}>Github</Link></p>
+      <p>
+        Find me on{" "}
+        <a href={`https://www.linkedin.com/in/${linkedin}`}>LinkedIn</a>
+      </p>
+      <p>
+        Find me on <a href={`https://www.github.com/${github}`}>Github</a>
+      </p>
     </Section>
   )
 }
