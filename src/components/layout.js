@@ -23,7 +23,7 @@ class Layout extends React.Component {
           <main>{children}</main>
         </div>
         <Footer>
-          © {new Date().getFullYear()}, Built with
+          © {new Date().getFullYear()}, Built by Michael Nguyen with
           {` `}
           <a href="https://www.gatsbyjs.org">Gatsby</a>
         </Footer>

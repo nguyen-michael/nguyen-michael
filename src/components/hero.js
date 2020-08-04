@@ -1,8 +1,7 @@
 import React from "react"
 import { Link, useStaticQuery, graphql } from "gatsby"
-import Img from "gatsby-image"
 import styled from "styled-components"
-import Button from "./button"
+import BackgroundImage from "gatsby-background-image"
 
 export default function Hero() {
   const data = useStaticQuery(graphql`
@@ -26,17 +25,18 @@ export default function Hero() {
   const { heroName, heroJobTitle, heroJumbotron } = data.mdx.frontmatter
 
   return (
-    <Section>
-      <h1>Howdy! My name is {heroName} </h1>
-      <h2>{heroJobTitle}</h2>
-      <Img fluid={heroJumbotron.childImageSharp.fluid} alt="Jumbotron" />
-      <Button>
+    <BackgroundImage fluid={heroJumbotron.childImageSharp.fluid}>
+      <Section>
+        <h1>Howdy! My name is {heroName} </h1>
+        <h2>{heroJobTitle}</h2>
         <Link to="#about">Learn More</Link>
-      </Button>
-    </Section>
+      </Section>
+    </BackgroundImage>
   )
 }
 
 const Section = styled.section`
+  background: linear-gradient(180deg, rgba(2,0,36,0) 70%, rgba(252,253,247,1) 100%);
   min-height: 100vh;
+  padding: 5rem;
 `

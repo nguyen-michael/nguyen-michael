@@ -1,8 +1,6 @@
 import Typography from "typography"
 import altonTheme from "typography-theme-alton"
 
-const typography = new Typography(altonTheme)
-
 /* 
 Base styling: 
 baseFontSize: "18px"
@@ -20,8 +18,15 @@ title: "Alton"
 __proto__: Object
 */
 
+altonTheme.overrideThemeStyles = () => ({
+  a: {
+    color: "#89a37f",
+  },
+})
+
 altonTheme.googleFonts[0] = { name: "Belgrano", styles: ["400"] }
 altonTheme.headerFontFamily[0] = "Belgrano"
+const typography = new Typography(altonTheme)
 
 // Hot reload typography in development.
 if (process.env.NODE_ENV !== `production`) {
