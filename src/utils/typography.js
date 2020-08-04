@@ -21,6 +21,10 @@ __proto__: Object
 altonTheme.overrideThemeStyles = () => ({
   a: {
     color: "#89a37f",
+    "transition-duration": "300ms",
+  },
+  "a:hover": {
+    "transition-duration": "300ms",
   },
 })
 

@@ -1,5 +1,5 @@
 import React from "react"
-import { useStaticQuery, graphql } from "gatsby"
+import { Link, useStaticQuery, graphql } from "gatsby"
 import styled from "styled-components"
 
 export default function Projects() {
@@ -18,6 +18,7 @@ export default function Projects() {
   return (
     <Section>
       <h1>{projectsTitle}</h1>
+      <Link to="/projects">Projects</Link>
     </Section>
   )
 }

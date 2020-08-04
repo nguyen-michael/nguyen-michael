@@ -7,6 +7,7 @@ import { rhythm } from "../utils/typography"
 class Layout extends React.Component {
   render() {
     const { children } = this.props
+    const currentPath = this.props.location.pathname
 
     return (
       <Wrapper>
@@ -19,7 +20,8 @@ class Layout extends React.Component {
             flexGrow: `1`,
           }}
         >
-          <Navbar />
+          {/* No navbar on index Screen */}
+          {(currentPath !== "/" && <Navbar />)}
           <main>{children}</main>
         </div>
         <Footer>
