@@ -6,6 +6,7 @@ pageKey: project
 liveUrl: https://nguyenmichael.dev/viet-type-assist/
 repoUrl: https://github.com/nguyen-michael/viet-type-assist
 ogImage: 
+tags: ["vue", "react", "vietnamese"]
 ---
 # Vietnamese Type Assist
 

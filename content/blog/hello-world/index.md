@@ -2,6 +2,7 @@
 title: Hello World
 date: "2015-05-01T22:12:03.284Z"
 pageKey: blog-post
+tags: ["ducks", "eggs", "bicycle"]
 ---
 
 This is my first post on my new fake blog! How exciting!

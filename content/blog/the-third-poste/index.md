@@ -2,6 +2,7 @@
 title: My Tird Poste!
 date: "2017-05-06T23:46:37.121Z"
 pageKey: blog-post
+tags: ["eggs", "discovery"]
 ---
 
 THE WORDS HERE ARE DESTROYING THE DESTRUCTION

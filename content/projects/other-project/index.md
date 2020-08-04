@@ -6,6 +6,7 @@ pageKey: project
 liveUrl: https://dirt-wheels.herokuapp.com/
 repoUrl: https://github.com/nguyen-michael/dirt-wheels
 ogImage: 
+tags: ["bicycle", "react", "mysql"]
 ---
 # Dirt Wheels
 

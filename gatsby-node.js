@@ -1,4 +1,5 @@
 const path = require(`path`)
+const _ = require(`lodash`)
 const { createFilePath } = require(`gatsby-source-filesystem`)
 
 exports.createPages = ({ graphql, actions }) => {
@@ -6,6 +7,8 @@ exports.createPages = ({ graphql, actions }) => {
 
   const blogPost = path.resolve(`./src/templates/blog-post.js`)
   const projectPage = path.resolve(`./src/templates/project.js`)
+  const tagsPage = path.resolve(`./src/templates/tags.js`)
+
   return graphql(
     `
       {
@@ -21,8 +24,14 @@ exports.createPages = ({ graphql, actions }) => {
               frontmatter {
                 title
                 pageKey
+                tags
               }
             }
+          }
+        }
+        tagsGroup: allMdx(limit: 1000) {
+          group(field: frontmatter___tags) {
+            fieldValue
           }
         }
       }
@@ -33,12 +42,11 @@ exports.createPages = ({ graphql, actions }) => {
     }
 
     const pages = result.data.allMdx.edges
-    // Create blog posts pages.
+    const tags = result.data.tagsGroup.group
+
     const posts = pages.filter(
       page => page.node.frontmatter.pageKey === "blog-post"
     )
-
-    // Create project pages
     const projects = pages.filter(
       page => page.node.frontmatter.pageKey === "project"
     )
@@ -64,6 +72,16 @@ exports.createPages = ({ graphql, actions }) => {
         component: projectPage,
         context: {
           slug: project.node.fields.slug,
+        },
+      })
+    })
+
+    tags.forEach(tag => {
+      createPage({
+        path: `tags/${_.kebabCase(tag.fieldValue)}`,
+        component: tagsPage,
+        context: {
+          tag: tag.fieldValue,
         },
       })
     })
