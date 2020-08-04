@@ -19,27 +19,23 @@ export default function About() {
           aboutSkills
         }
       }
-      file(name: {eq: "michael-nguyen-resume"}, relativePath: {}) {
+      file(name: { eq: "michael-nguyen-resume" }, relativePath: {}) {
         publicURL
       }
     }
   `)
 
-  const {
-    aboutBlurb,
-    aboutImage,
-    aboutSkills,
-  } = data.mdx.frontmatter
+  const { aboutBlurb, aboutImage, aboutSkills } = data.mdx.frontmatter
 
-  const {
-    publicURL
-  } = data.file
+  const { publicURL } = data.file
 
   return (
     <Section id="about">
       <div>
         <p>{aboutBlurb}</p>
-        <a href={publicURL} target="_blank">Resume</a>
+        <a href={publicURL} target="_blank" rel="noreferrer">
+          Resume
+        </a>
       </div>
       <div>
         <SkillsList>
