@@ -11,8 +11,8 @@ export default function About() {
           aboutBlurb
           aboutImage {
             childImageSharp {
-              fluid(maxWidth: 2000) {
-                ...GatsbyImageSharpFluid
+              fixed(width: 400) {
+                ...GatsbyImageSharpFixed
               }
             }
           }
@@ -25,26 +25,21 @@ export default function About() {
     }
   `)
 
-  const { aboutBlurb, aboutImage, aboutSkills } = data.mdx.frontmatter
+  const { aboutBlurb, aboutImage } = data.mdx.frontmatter
 
   const { publicURL } = data.file
 
   return (
     <Section id="about">
-      <div>
-        <p>{aboutBlurb}</p>
-        <a href={publicURL} target="_blank" rel="noreferrer">
-          Resume
-        </a>
-      </div>
-      <div>
-        <SkillsList>
-          {aboutSkills.map((skill, index) => {
-            return <li key={index}>{skill}</li>
-          })}
-        </SkillsList>
-      </div>
-      <Img fluid={aboutImage.childImageSharp.fluid} alt="Jumbotron" />
+      <p>{aboutBlurb}</p>
+      <a href={publicURL} target="_blank" rel="noreferrer">
+        Resume
+      </a>
+      <Img
+        fixed={aboutImage.childImageSharp.fixed}
+        alt="Jumbotron"
+        style={{ borderRadius: `1rem` }}
+      />
     </Section>
   )
 }
@@ -55,9 +50,6 @@ const SkillsList = styled.ul`
 
 const Section = styled.section`
   min-height: 50vh;
-  display: grid;
-  grid-template-columns: 3fr 1fr 2fr;
-  @media (max-width: 800px) {
-    grid-template-columns: 1fr;
-  }
+  display: flex;
+  margin: 4rem 0;
 `

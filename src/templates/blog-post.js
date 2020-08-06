@@ -2,7 +2,6 @@ import React from "react"
 import { Link, graphql } from "gatsby"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 
-import Bio from "../components/bio"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { rhythm, scale } from "../utils/typography"
@@ -30,13 +29,22 @@ class BlogPostTemplate extends React.Component {
         >
           {post.frontmatter.date}
         </p>
+        <div>
+          Tags:
+          {post.frontmatter.tags.map(tag => {
+            return (
+              <span key={tag}>
+                <Link to={`/tags/${tag}`}>{tag}</Link>
+              </span>
+            )
+          })}
+        </div>
         <MDXRenderer>{post.body}</MDXRenderer>
         <hr
           style={{
             marginBottom: rhythm(1),
           }}
         />
-        <Bio />
 
         <ul
           style={{
@@ -85,6 +93,7 @@ export const pageQuery = graphql`
         title
         date(formatString: "MMMM DD, YYYY")
         description
+        tags
       }
     }
   }

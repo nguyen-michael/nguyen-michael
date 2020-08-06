@@ -27,7 +27,9 @@ export default function Hero() {
   return (
     <BackgroundImage fluid={heroJumbotron.childImageSharp.fluid}>
       <Section>
-        <h1>Howdy! My name is {heroName} </h1>
+        <h1>
+          Howdy! My name is <Name>{heroName}</Name>{" "}
+        </h1>
         <h2>{heroJobTitle}</h2>
         <Link to="#about">Learn More</Link>
       </Section>
@@ -36,7 +38,15 @@ export default function Hero() {
 }
 
 const Section = styled.section`
-  background: linear-gradient(180deg, rgba(2,0,36,0) 70%, rgba(252,253,247,1) 100%);
+  background: linear-gradient(
+    180deg,
+    rgba(2, 0, 36, 0) 70%,
+    rgba(252, 253, 247, 1) 100%
+  );
   min-height: 100vh;
   padding: 5rem;
+`
+
+const Name = styled.span`
+  color: #936962;
 `
