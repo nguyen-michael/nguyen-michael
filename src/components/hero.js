@@ -44,7 +44,6 @@ const Section = styled.section`
     rgba(252, 253, 247, 1) 100%
   );
   min-height: 100vh;
-  padding: 5rem;
 `
 
 const Name = styled.span`

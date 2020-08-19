@@ -14,7 +14,4 @@ aboutSkills:
   - Third Skill
   - More Skills
 projectsTitle: Latest Work
-contactTitle: Contact Me
-contactCallToAction: Let's Talk Business
-contactEmail: howdy at nguyenmichael.dev
 ---

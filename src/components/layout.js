@@ -1,8 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 import Navbar from "./navbar"
-
-import { rhythm } from "../utils/typography"
+import "./styles.scss"
 
 class Layout extends React.Component {
   render() {
@@ -15,12 +14,8 @@ class Layout extends React.Component {
           style={{
             marginLeft: `auto`,
             marginRight: `auto`,
-            width: rhythm(45),
-            padding: `0 ${rhythm(4)}`,
-            flexGrow: `1`,
           }}
         >
-          {/* No navbar on index Screen */}
           {(currentPath !== "/" && <Navbar />)}
           <main>{children}</main>
         </div>
@@ -37,13 +32,10 @@ class Layout extends React.Component {
 const Wrapper = styled.div`
   background-color: #fcfdf7;
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
 `
 
 const Footer = styled.footer`
   text-align: center;
-  margin: 24px;
 `
 
 export default Layout

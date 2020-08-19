@@ -14,19 +14,16 @@ class IndexPage extends React.Component {
     const siteTitle = data.site.siteMetadata.title
 
     return (
-      <>
+      <Layout location={this.props.location} title={siteTitle}>
+        <SEO
+          title="Howdy!"
+          keywords={[`blog`, `gatsby`, `javascript`, `react`]}
+        />
         <Hero />
-        <Layout location={this.props.location} title={siteTitle}>
-          <SEO
-            title="Howdy!"
-            keywords={[`blog`, `gatsby`, `javascript`, `react`]}
-          />
-
-          <About />
-          <Projects />
-          <Contact />
-        </Layout>
-      </>
+        <About />
+        <Projects />
+        <Contact />
+      </Layout>
     )
   }
 }

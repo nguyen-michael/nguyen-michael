@@ -13,29 +13,15 @@ export default function Contact() {
           }
         }
       }
-      mdx(frontmatter: { pageKey: { eq: "index" } }) {
-        frontmatter {
-          contactTitle
-          contactCallToAction
-          contactEmail
-        }
-      }
     }
   `)
-
-  const {
-    contactTitle,
-    contactCallToAction,
-    contactEmail,
-  } = data.mdx.frontmatter
 
   const { github, linkedin } = data.site.siteMetadata.social
 
   return (
     <Section>
-      <h1>{contactTitle}</h1>
-      <h2>{contactCallToAction}</h2>
-      <h3>{contactEmail}</h3>
+      <h1>Let me know how I can serve you.</h1>
+      <button>Get in touch</button>
       <p>
         Find me on{" "}
         <a href={`https://www.linkedin.com/in/${linkedin}`}>LinkedIn</a>
@@ -48,5 +34,8 @@ export default function Contact() {
 }
 
 const Section = styled.section`
-  min-height: 50vh;
+  min-height: 100vh;
+  background-color: #624641;
+  background-image: linear-gradient(180deg, rgba(252, 253, 247, 1) 0%, rgba(0, 0, 0, 0) 40%
+  );
 `

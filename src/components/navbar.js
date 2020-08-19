@@ -27,21 +27,13 @@ class Navbar extends React.Component {
 }
 
 const Wrapper = styled.div`
-  display: flex;
   font-family: Belgrano, sans-serif;
-  height: auto;
-  justify-content: space-between;
   @media (max-width: 800px) {
     justify-content: center;
   }
 `
 
 const NavItem = styled.div`
-  margin: ${rhythm(1.5)};
-  @media (max-width: 800px) {
-    margin: ${rhythm(0.75)} ${rhythm(0.33)};
-
-  }
 `
 
 const NavLink = styled.span`
