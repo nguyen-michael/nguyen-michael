@@ -27,13 +27,17 @@ export default function Hero() {
 
   return (
     <BackgroundImage fluid={heroJumbotron.childImageSharp.fluid}>
-      <Section>
-        <Navbar />
-        <h1>
-          Howdy! My name is <Name>{heroName}</Name>{" "}
-        </h1>
-        <h2>{heroJobTitle}</h2>
-        <Link to="#about">Learn More</Link>
+      <Section className="hero">
+        <div className="hero-head">
+          <Navbar />
+        </div>
+        <div className="hero-body has-text-centered">
+          <h1 className="is-size-1 mb-4">
+            Howdy! I'm <Name>{heroName}</Name>{" "}
+          </h1>
+          <h2 className="is-size-3 mb-2">{heroJobTitle}</h2>
+          <Link to="#about" className="button is-black">Learn More</Link>
+        </div>
       </Section>
     </BackgroundImage>
   )
