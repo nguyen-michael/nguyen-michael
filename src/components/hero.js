@@ -2,6 +2,7 @@ import React from "react"
 import { Link, useStaticQuery, graphql } from "gatsby"
 import styled from "styled-components"
 import BackgroundImage from "gatsby-background-image"
+import Navbar from "./navbar"
 
 export default function Hero() {
   const data = useStaticQuery(graphql`
@@ -27,6 +28,7 @@ export default function Hero() {
   return (
     <BackgroundImage fluid={heroJumbotron.childImageSharp.fluid}>
       <Section>
+        <Navbar />
         <h1>
           Howdy! My name is <Name>{heroName}</Name>{" "}
         </h1>

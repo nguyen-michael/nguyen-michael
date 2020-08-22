@@ -1,47 +1,56 @@
 import React from "react"
 import { Link } from "gatsby"
-import styled from "styled-components"
-
-import { rhythm } from "../utils/typography"
 
 class Navbar extends React.Component {
   render() {
     return (
-      <Wrapper>
-        <NavItem>
-          <NavLink>
-            <Link to="/">Michael Nguyen</Link>
-          </NavLink>
-        </NavItem>
-        <NavItem>
-          <NavLink>
-            <Link to="/projects">Projects</Link>
-          </NavLink>
-          <NavLink>
-            <Link to="/blog">Blog</Link>
-          </NavLink>
-        </NavItem>
-      </Wrapper>
+      <nav
+          class="navbar is-transparent"
+          role="navigation"
+          aria-label="main navigation"
+        >
+          <div class="navbar-brand">
+            <Link class="navbar-item" href="/">
+              <p className="is-size-4">Michael Nguyen</p>
+            </Link>
+
+            <div
+              role="button"
+              class="navbar-burger burger"
+              aria-label="menu"
+              aria-expanded="false"
+              data-target="navbarBasicExample"
+            >
+              <span aria-hidden="true"></span>
+              <span aria-hidden="true"></span>
+              <span aria-hidden="true"></span>
+            </div>
+          </div>
+
+          <div id="navbarBasicExample" class="navbar-menu">
+            <div class="navbar-end">
+              <div class="navbar-start">
+                <Link to="/projects" className="navbar-item">
+                  <p className="is-size-4">
+                    Projects
+                  </p>
+                </Link>
+                <Link to="/blog" className="navbar-item">
+                  <p className="is-size-4">
+                    Blog
+                  </p>
+                </Link>
+                <Link to="/contact" className="navbar-item">
+                  <p className="is-size-4">
+                    Contact
+                  </p>
+                </Link>
+              </div>
+            </div>
+          </div>
+        </nav>
     )
   }
 }
-
-const Wrapper = styled.div`
-  font-family: Belgrano, sans-serif;
-  @media (max-width: 800px) {
-    justify-content: center;
-  }
-`
-
-const NavItem = styled.div`
-`
-
-const NavLink = styled.span`
-  padding: ${rhythm(1)};
-  font-weight: bold;
-  @media (max-width: 800px) {
-    padding: ${rhythm(0.5)};
-  }
-`
 
 export default Navbar
