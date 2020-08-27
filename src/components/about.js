@@ -1,7 +1,6 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
-import styled from "styled-components"
 
 export default function About() {
   const data = useStaticQuery(graphql`
@@ -11,8 +10,8 @@ export default function About() {
           aboutBlurb
           aboutImage {
             childImageSharp {
-              fixed(width: 400) {
-                ...GatsbyImageSharpFixed
+              fluid(maxWidth: 400) {
+                ...GatsbyImageSharpFluid
               }
             }
           }
@@ -25,17 +24,18 @@ export default function About() {
   const { aboutBlurb, aboutImage } = data.mdx.frontmatter
 
   return (
-    <Section id="about">
-      <p>{aboutBlurb}</p>
-      <Img
-        fixed={aboutImage.childImageSharp.fixed}
-        alt="Jumbotron"
-        style={{ borderRadius: `50%` }}
-      />
-    </Section>
+    <section id="about" className="section">
+      <div className="container">
+        <div className="columns">
+          <p className="column mr-6">{aboutBlurb}</p>
+          <Img
+            className="column is-one-third"
+            fluid={aboutImage.childImageSharp.fluid}
+            alt="Jumbotron"
+            style={{ borderRadius: `50%` }}
+          />
+        </div>
+      </div>
+    </section>
   )
 }
-
-const Section = styled.section`
-  min-height: 50vh;
-`

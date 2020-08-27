@@ -13,5 +13,5 @@ aboutSkills:
   - Skill 2
   - Third Skill
   - More Skills
-projectsTitle: Latest Work
+projectsTitle: Latest Projects
 ---

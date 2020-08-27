@@ -36,7 +36,11 @@ export default function Hero() {
             Howdy! I'm <Name>{heroName}</Name>{" "}
           </h1>
           <h2 className="is-size-3 mb-2">{heroJobTitle}</h2>
-          <Link to="#about" className="button is-black">Learn More</Link>
+        </div>
+        <div className="hero-foot pb-6 has-text-centered">
+          <Link to="#about" className="button is-black is-outlined">
+            Learn More
+          </Link>
         </div>
       </Section>
     </BackgroundImage>
