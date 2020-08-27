@@ -32,12 +32,20 @@ export default function ProjectCard() {
           <Link to="/">
             <h1 className="is-size-4">THIS PROJECT</h1>
           </Link>
-          <p>
+          <p className="mb-2">
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquam
             est officia qui laudantium eum vel atque eos veritatis, praesentium,
             enim sit esse quos aspernatur! Debitis numquam optio quis ratione
             recusandae?
           </p>
+          <div class="columns">
+            <div class="column">
+              <button className="button">Link Ext</button>
+            </div>
+            <div class="column">
+              <button className="button">Github Ext</button>
+            </div>
+          </div>
         </div>
       </div>
     </div>
