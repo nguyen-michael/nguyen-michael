@@ -38,7 +38,7 @@ export default function ProjectCard() {
             enim sit esse quos aspernatur! Debitis numquam optio quis ratione
             recusandae?
           </p>
-          <div class="columns">
+          <div class="columns has-text-centered">
             <div class="column">
               <button className="button">Link Ext</button>
             </div>

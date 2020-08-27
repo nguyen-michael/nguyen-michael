@@ -31,3 +31,16 @@ a {
   background-color: transparentize($color: $white, $amount: 0.05);
   width: 100vw;
 }
+
+.hero-bg {
+  background-attachment: fixed;
+}
+
+.index-contact {
+  background-color: #624641;
+  background-image: linear-gradient(
+    180deg,
+    rgba(252, 253, 247, 1) 0%,
+    rgba(0, 0, 0, 0) 40%
+  );
+}

@@ -26,7 +26,10 @@ export default function Hero() {
   const { heroName, heroJobTitle, heroJumbotron } = data.mdx.frontmatter
 
   return (
-    <BackgroundImage fluid={heroJumbotron.childImageSharp.fluid}>
+    <BackgroundImage
+      fluid={heroJumbotron.childImageSharp.fluid}
+      className="hero-bg"
+    >
       <Section className="hero">
         <div className="hero-head">
           <Navbar />
@@ -57,5 +60,5 @@ const Section = styled.section`
 `
 
 const Name = styled.span`
-  color: #936962;
+  color: #624641;
 `
