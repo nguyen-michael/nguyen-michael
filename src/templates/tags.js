@@ -6,7 +6,7 @@ import SEO from "../components/seo"
 const Tags = ({ pageContext, data, location }) => {
   const siteTitle = data.site.siteMetadata.title
   const { tag } = pageContext
-  const { edges, totalCount } = data.allMdx
+  const { edges, totalCount } = data.allMarkdownRemark
   const tagHeader = `${totalCount} post${
     totalCount === 1 ? "" : "s"
   } tagged with "${tag}"`
@@ -70,7 +70,7 @@ export const pageQuery = graphql`
         title
       }
     }
-    allMdx(
+    allMarkdownRemark(
       limit: 2000
       sort: { fields: [frontmatter___date], order: DESC }
       filter: { frontmatter: { tags: { in: [$tag] } } }

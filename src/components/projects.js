@@ -5,7 +5,7 @@ import ProjectCard from "./project-card"
 export default function Projects() {
   const data = useStaticQuery(graphql`
     query ProjectsSectionQuery {
-      mdx(frontmatter: { pageKey: { eq: "index" } }) {
+      markdownRemark(frontmatter: { pageKey: { eq: "index" } }) {
         frontmatter {
           projectsTitle
         }
@@ -13,7 +13,7 @@ export default function Projects() {
     }
   `)
 
-  const { projectsTitle } = data.mdx.frontmatter
+  const { projectsTitle } = data.markdownRemark.frontmatter
 
   return (
     <section className="section">

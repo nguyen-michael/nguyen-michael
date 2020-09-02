@@ -9,7 +9,7 @@ class ProjectsPage extends React.Component {
     /* Data comes to the gatsby page component as a prop from the page query */
     const { data } = this.props
     const siteTitle = data.site.siteMetadata.title
-    const projects = data.allMdx.edges
+    const projects = data.allMarkdownRemark.edges
 
     return (
       <Layout location={this.props.location} title={siteTitle}>
@@ -46,7 +46,7 @@ export const pageQuery = graphql`
         title
       }
     }
-    allMdx(
+    allMarkdownRemark(
       sort: { fields: frontmatter___date, order: DESC }
       filter: { frontmatter: { pageKey: { eq: "project" } } }
     ) {

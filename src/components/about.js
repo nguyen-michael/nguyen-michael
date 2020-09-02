@@ -5,7 +5,7 @@ import Img from "gatsby-image"
 export default function About() {
   const data = useStaticQuery(graphql`
     query AboutSectionQuery {
-      mdx(frontmatter: { pageKey: { eq: "index" } }) {
+      markdownRemark(frontmatter: { pageKey: { eq: "index" } }) {
         frontmatter {
           aboutBlurb
           aboutImage {
@@ -21,7 +21,7 @@ export default function About() {
     }
   `)
 
-  const { aboutBlurb, aboutImage } = data.mdx.frontmatter
+  const { aboutBlurb, aboutImage } = data.markdownRemark.frontmatter
 
   return (
     <section id="about" className="section">

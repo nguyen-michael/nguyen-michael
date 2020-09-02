@@ -14,7 +14,6 @@ module.exports = {
     `gatsby-plugin-sharp`,
     `gatsby-plugin-offline`,
     `gatsby-plugin-react-helmet`,
-    `gatsby-plugin-feed-mdx`,
     `gatsby-plugin-smoothscroll`,
     `gatsby-plugin-sass`,
     {
@@ -46,10 +45,9 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-plugin-mdx`,
+      resolve: `gatsby-transformer-remark`,
       options: {
-        extensions: [".mdx", ".md"],
-        gatsbyRemarkPlugins: [
+        plugins: [
           {
             resolve: `gatsby-remark-images`,
             options: {
@@ -71,8 +69,7 @@ module.exports = {
           {
             resolve: `gatsby-remark-smartypants`,
           },
-        ],
-        plugins: [`gatsby-remark-images`],
+        ]
       },
     },
     {

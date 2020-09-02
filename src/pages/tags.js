@@ -6,14 +6,14 @@ import SEO from "../components/seo"
 
 class TagsPage extends React.Component {
   render() {
-    const { site, allMdx } = this.props.data
+    const { site, allMarkdownRemark } = this.props.data
     const siteTitle = site.siteMetadata.title
 
     return (
       <Layout location={this.props.location} title={siteTitle}>
         <SEO title="Tags" />
         <h1>Tags</h1>
-        {allMdx.group.map(group => {
+        {allMarkdownRemark.group.map(group => {
           const tag = group.fieldValue
           const count = group.totalCount
 
@@ -37,7 +37,7 @@ export const pageQuery = graphql`
         title
       }
     }
-    allMdx {
+    allMarkdownRemark {
       group(field: frontmatter___tags) {
         fieldValue
         totalCount

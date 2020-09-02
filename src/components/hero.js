@@ -6,7 +6,7 @@ import Navbar from "./navbar"
 export default function Hero() {
   const data = useStaticQuery(graphql`
     query HeroSectionQuery {
-      mdx(frontmatter: { pageKey: { eq: "index" } }) {
+      markdownRemark(frontmatter: { pageKey: { eq: "index" } }) {
         frontmatter {
           heroJobTitle
           heroJumbotron {
@@ -22,7 +22,7 @@ export default function Hero() {
     }
   `)
 
-  const { heroName, heroJobTitle, heroJumbotron } = data.mdx.frontmatter
+  const { heroName, heroJobTitle, heroJumbotron } = data.markdownRemark.frontmatter
 
   return (
     <BackgroundImage
