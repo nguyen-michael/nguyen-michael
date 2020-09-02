@@ -18,6 +18,10 @@ $link: $green;
 
 @import "~bulma/bulma.sass";
 
+html {
+  scroll-behavior: smooth;
+}
+
 a {
   font-family: "Belgrano", sans-serif;
 }
@@ -39,4 +43,9 @@ a {
 
 .index-contact {
   background-color: #624641;
+}
+
+.layout-wrapper {
+  background-color: #fcfdf7;
+  min-height: 100vh;
 }
