@@ -59,7 +59,7 @@ a {
 }
 
 .layout-bounding {
-  margin: auto;
+  margin: 0 auto;
   max-width: 1000px;
 }
 
@@ -68,5 +68,26 @@ a {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: space-between
+  justify-content: space-between;
+}
+
+.blog-link {
+  transition: background-color 0.2s ease;
+}
+
+.blog-link:not(:first-of-type) {
+  border-top: 1px solid $green;
+}
+
+.blog-link:hover {
+  background-color: darken($white, 5);
+}
+
+.tag {
+  position: relative;
+  top: 0;
+  transition: top ease 0.1s;
+}
+.tag:hover {
+  top: -1px;
 }

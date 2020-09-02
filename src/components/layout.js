@@ -10,8 +10,8 @@ class Layout extends React.Component {
 
     return (
       <div className="layout-wrapper">
-        {currentPath !== "/" && <Navbar />}
         <div className={currentPath === "/" ? "" : "layout-bounding"}>
+          {currentPath !== "/" && <Navbar />}
           <main>{children}</main>
         </div>
         <Footer />

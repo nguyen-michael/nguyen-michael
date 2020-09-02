@@ -3,7 +3,6 @@ import { Link, graphql } from "gatsby"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import { rhythm } from "../utils/typography"
 
 class Blog extends React.Component {
   render() {
@@ -14,33 +13,41 @@ class Blog extends React.Component {
     return (
       <Layout location={this.props.location} title={siteTitle}>
         <SEO title="All posts" />
-        <div style={{ margin: "20px 0 40px" }}>
+        <section className="section">
+          <h1 className="has-text-centered is-size-1 mb-4 emphasis">Blog</h1>
+          <h2 className="has-text-centered is-size-5 mb-6">
+            Public Journal, Dev Journal, Life Blogs, Musings, Thoughts
+          </h2>
           {posts.map(({ node }) => {
             const title = node.frontmatter.title || node.fields.slug
             return (
-              <div key={node.fields.slug}>
-                <h3
-                  style={{
-                    marginBottom: rhythm(1 / 4),
-                  }}
-                >
-                  <Link
-                    style={{ boxShadow: `none` }}
-                    to={`/blog${node.fields.slug}`}
-                  >
-                    {title}
-                  </Link>
-                </h3>
-                <small>{node.frontmatter.date}</small>
-                <p
-                  dangerouslySetInnerHTML={{
-                    __html: node.frontmatter.description || node.excerpt,
-                  }}
-                />
+              <div className="columns blog-link" key={node.fields.slug}>
+                <div class="column is-2">
+                  <small>{node.frontmatter.date}</small>
+                </div>
+                <div class="column is-three-fifths">
+                  <h3>
+                    <Link to={`/blog${node.fields.slug}`}>{title}</Link>
+                  </h3>
+                  <p
+                    dangerouslySetInnerHTML={{
+                      __html: node.frontmatter.description || node.excerpt,
+                    }}
+                  />
+                </div>
+                <div className="column tags">
+                  {node.frontmatter.tags.map(tag => {
+                    return (
+                      <Link to={`/tags/${tag}`} className="tag is-link">
+                        {tag}
+                      </Link>
+                    )
+                  })}
+                </div>
               </div>
             )
           })}
-        </div>
+        </section>
       </Layout>
     )
   }
@@ -66,9 +73,10 @@ export const pageQuery = graphql`
             slug
           }
           frontmatter {
-            date(formatString: "MMMM DD, YYYY")
+            date(formatString: "Do MMM, YYYY")
             title
             description
+            tags
           }
         }
       }

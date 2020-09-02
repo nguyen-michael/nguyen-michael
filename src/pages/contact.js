@@ -21,50 +21,54 @@ class ContactPage extends React.Component {
           </h1>
           <div className="columns">
             <div className="column">
-              <div className="field">
-                <div className="label">Name</div>
-                <div className="control">
-                  <input type="text" className="input" />
+              <form name="contact">
+                <div className="field">
+                  <div className="label">Name</div>
+                  <div className="control">
+                    <input type="text" className="input" name="name" />
+                  </div>
                 </div>
-              </div>
-              <div className="field">
-                <div className="label">Email</div>
-                <div className="control">
-                  <input type="text" className="input" />
+                <div className="field">
+                  <div className="label">Email</div>
+                  <div className="control">
+                    <input type="text" className="input" name="email" />
+                  </div>
                 </div>
-              </div>
-              <div className="field">
-                <div className="label">Company</div>
-                <div className="control">
-                  <input type="text" className="input" />
+                <div className="field">
+                  <div className="label">Company</div>
+                  <div className="control">
+                    <input type="text" className="input" name="company" />
+                  </div>
                 </div>
-              </div>
-              <div className="field">
-                <div className="label">Purpose of Inquiry</div>
-                <div className="control">
-                  <input type="text" className="input" />
+                <div className="field">
+                  <div className="label">Purpose of Inquiry</div>
+                  <div className="control">
+                    <input type="text" className="input" name="purpose" />
+                  </div>
                 </div>
-              </div>
-              <div className="field">
-                <div className="label">Message</div>
-                <div className="control">
-                  <textarea
-                    name=""
-                    id=""
-                    cols="30"
-                    rows="10"
-                    className="textarea"
-                  ></textarea>
+                <div className="field">
+                  <div className="label">Message</div>
+                  <div className="control">
+                    <textarea
+                      name="message"
+                      rows="8"
+                      className="textarea"
+                    ></textarea>
+                  </div>
                 </div>
-              </div>
-              <div className="field is-grouped">
-                <div className="control">
-                  <button className="button is-link">Submit</button>
+                <div className="field is-grouped">
+                  <div className="control">
+                    <button className="button is-link" type="submit">
+                      Submit
+                    </button>
+                  </div>
+                  <div className="control">
+                    <button className="button is-link is-light" type="reset">
+                      Cancel
+                    </button>
+                  </div>
                 </div>
-                <div className="control">
-                  <button className="button is-link is-light">Cancel</button>
-                </div>
-              </div>
+              </form>
             </div>
             <div className="column">
               <div className="container is-size-1">
