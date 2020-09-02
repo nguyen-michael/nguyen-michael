@@ -17,10 +17,10 @@ class Layout extends React.Component {
             marginRight: `auto`,
           }}
         >
-          {(currentPath !== "/" && <Navbar />)}
+          {currentPath !== "/" && <Navbar />}
           <main>{children}</main>
+          <Footer />
         </div>
-        <Footer />
       </Wrapper>
     )
   }

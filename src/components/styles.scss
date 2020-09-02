@@ -13,6 +13,7 @@ $family-sans-serif: "Open Sans", -apple-system, "Segoe UI", "Roboto", "Oxygen",
 $navbar-background-color: transparent;
 $navbar-item-color: $green;
 $navbar-item-hover-color: $black;
+$footer-background-color: $white;
 $link: $green;
 
 @import "~bulma/bulma.sass";
@@ -38,9 +39,4 @@ a {
 
 .index-contact {
   background-color: #624641;
-  background-image: linear-gradient(
-    180deg,
-    rgba(252, 253, 247, 1) 0%,
-    rgba(0, 0, 0, 0) 40%
-  );
 }
