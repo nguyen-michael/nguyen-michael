@@ -38,11 +38,11 @@ export default function ProjectCard() {
             enim sit esse quos aspernatur! Debitis numquam optio quis ratione
             recusandae?
           </p>
-          <div class="columns has-text-centered">
-            <div class="column">
+          <div className="columns has-text-centered">
+            <div className="column">
               <button className="button">Link Ext</button>
             </div>
-            <div class="column">
+            <div className="column">
               <button className="button">Github Ext</button>
             </div>
           </div>

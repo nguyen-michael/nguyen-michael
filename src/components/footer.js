@@ -32,8 +32,8 @@ export default function Footer() {
           </a>
         </div>
       </div>
-      <div class="level">
-        <div class="level-item">
+      <div className="level">
+        <div className="level-item">
           <span className="has-text-centered">
             © {new Date().getFullYear()}, Built by Michael Nguyen with&nbsp;
             <a href="https://www.gatsbyjs.com">Gatsby</a>
