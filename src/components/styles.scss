@@ -37,8 +37,21 @@ a {
   width: 100vw;
 }
 
+.hero {
+  background: linear-gradient(
+    180deg,
+    rgba(2, 0, 36, 0) 70%,
+    rgba(252, 253, 247, 1) 100%
+  );
+  min-height: 100vh;
+}
+
 .hero-bg {
   background-attachment: fixed;
+}
+
+.hero-name {
+  color: #624641;
 }
 
 .index-contact {
