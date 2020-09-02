@@ -35,7 +35,7 @@ export default function Hero() {
         </div>
         <div className="hero-body has-text-centered">
           <h1 className="is-size-1 mb-4">
-            Howdy! I'm <span className="hero-name">{heroName}</span>{" "}
+            Howdy! I'm <span className="emphasis">{heroName}</span>{" "}
           </h1>
           <h2 className="is-size-3 mb-2">{heroJobTitle}</h2>
         </div>

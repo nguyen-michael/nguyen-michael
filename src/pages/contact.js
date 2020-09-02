@@ -15,8 +15,10 @@ class ContactPage extends React.Component {
           title="How Can I Help?"
           keywords={[`contact`, `web development`, `web design`]}
         />
-        <section class="section">
-          <h1 className="has-text-centered is-size-1">Let's Get In Touch!</h1>
+        <section className="section">
+          <h1 className="has-text-centered is-size-1 mb-6">
+            Let's Get In Touch!
+          </h1>
           <div className="columns">
             <div className="column">
               <div className="field">
@@ -55,12 +57,21 @@ class ContactPage extends React.Component {
                   ></textarea>
                 </div>
               </div>
+              <div className="field is-grouped">
+                <div className="control">
+                  <button className="button is-link">Submit</button>
+                </div>
+                <div className="control">
+                  <button className="button is-link is-light">Cancel</button>
+                </div>
+              </div>
             </div>
             <div className="column">
               <div className="container is-size-1">
                 <h2>
-                  Great partnerships start with a simple message. Shoot me a line,
-                  let's talk.
+                  Great partnerships start with a simple message. Shoot me a
+                  line,&nbsp;
+                  <span className="emphasis">let's talk</span>.
                 </h2>
               </div>
             </div>
