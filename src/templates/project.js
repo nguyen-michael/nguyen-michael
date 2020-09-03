@@ -3,46 +3,33 @@ import { Link, graphql } from "gatsby"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import { rhythm, scale } from "../utils/typography"
 
 class ProjectTemplate extends React.Component {
   render() {
-    const post = this.props.data.markdownRemark
+    const project = this.props.data.markdownRemark
     const siteTitle = this.props.data.site.siteMetadata.title
 
     return (
       <Layout location={this.props.location} title={siteTitle}>
         <SEO
-          title={post.frontmatter.title}
-          description={post.frontmatter.description || post.excerpt}
+          title={project.frontmatter.title}
+          description={project.frontmatter.description || project.excerpt}
         />
-        <h1>{post.frontmatter.title}</h1>
-        <p
-          style={{
-            ...scale(-1 / 5),
-            display: `block`,
-            marginBottom: rhythm(1),
-            marginTop: rhythm(-1),
-          }}
-        >
-          {post.frontmatter.date}
-        </p>
-        <div>
-          Tags:
-          {post.frontmatter.tags.map(tag => {
-            return (
-              <span key={tag}>
-                <Link to={`/tags/${tag}`}>{tag}</Link>
-              </span>
-            )
-          })}
-        </div>
-        <section dangerouslySetInnerHTML={{ __html: post.html }} />
-        <hr
-          style={{
-            marginBottom: rhythm(1),
-          }}
-        />
+        <section class="section">
+          <h1 className="emphasis is-size-1">{project.frontmatter.title}</h1>
+          <p className="is-size-6 mb-4">{project.frontmatter.date}</p>
+          <div class="tags mb-6">
+            {project.frontmatter.tags.map(tag => {
+              return (
+                <Link className="tag is-link" key={tag} to={`/tags/${tag}`}>
+                  {tag}
+                </Link>
+              )
+            })}
+          </div>
+          <section dangerouslySetInnerHTML={{ __html: project.html }} />
+          <hr />
+        </section>
       </Layout>
     )
   }

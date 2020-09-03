@@ -69,7 +69,8 @@ module.exports = {
           {
             resolve: `gatsby-remark-smartypants`,
           },
-        ]
+          `gatsby-remark-bulma`,
+        ],
       },
     },
     {

@@ -29,6 +29,25 @@ view back on the skyline of her hometown _Bookmarksgrove_, the headline of
 Lane. Pityful a rethoric question ran over her cheek, then she continued her
 way. On her way she met a copy.
 
+```jsx
+class Blog extends React.Component {
+  render() {
+    const { data } = this.props
+    const siteTitle = data.site.siteMetadata.title
+    const posts = data.allMarkdownRemark.edges
+
+    return (
+      <Layout location={this.props.location} title={siteTitle}>
+        <SEO title="All posts" />
+        <section className="section">
+          <h1 className="has-text-centered is-size-1 mb-4 emphasis">Blog</h1>
+          <h2 className="has-text-centered is-size-5 mb-6">
+            Public Journal, Dev Journal, Life Blogs, Musings, Thoughts
+```  
+
+<br />
+
+
 ### Overlaid the jeepers uselessly much excluding
 
 But nothing the copy said could convince her and so it didn’t take long until a

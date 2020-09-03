@@ -30,6 +30,7 @@ class ProjectsPage extends React.Component {
               const excerpt = node.frontmatter.description || node.excerpt
               return (
                 <ProjectCard
+                  key={slug}
                   slug={slug}
                   excerpt={excerpt}
                   title={title}

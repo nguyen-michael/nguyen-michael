@@ -1,27 +1,8 @@
 import React from "react"
-import { Link, useStaticQuery, graphql } from "gatsby"
+import { Link } from "gatsby"
 import Img from "gatsby-image"
 
 export default function ProjectCard(props) {
-  /*   const data = useStaticQuery(graphql`
-    query ProjectCardQuery {
-      file(
-        relativePath: {
-          eq: "../../content/assets/project-og-size-placeholder.png"
-        }
-      ) {
-        childImageSharp {
-          fluid {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
-    }
-  `)
-
-  const fluid = data.file.childImageSharp.fluid */
-
-  // Place holder defaults
   const image = props.ogImage || "/project-og-size-placeholder.png"
   const title = props.title || "This Project"
   const slug = props.slug || ""
@@ -37,9 +18,9 @@ export default function ProjectCard(props) {
       <div className="card">
         <div className="card-image">
           {props.ogImage ? (
-            <Img fluid={image.childImageSharp.fluid} alt="Project Image" />
+            <Img fluid={image.childImageSharp.fluid} alt="Project Scheenshot" />
           ) : (
-            <img src={image} alt="project image" />
+            <img src={image} alt="project" />
           )}
         </div>
         <div className="card-content">
