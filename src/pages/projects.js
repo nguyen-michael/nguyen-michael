@@ -24,16 +24,16 @@ class ProjectsPage extends React.Component {
           </h2>
           <div className="columns is-multiline">
             {projects.map(({ node }) => {
+              const slug = node.fields.slug
               const title = node.frontmatter.title || node.fields.slug
               // const image = node.frontmatter.ogImage
-              const slug = node.fields.slug
               const excerpt = node.frontmatter.description || node.excerpt
               return (
                 <ProjectCard
-                  title={title}
                   slug={slug}
                   excerpt={excerpt}
-                  key={slug}
+                  title={title}
+                  {...node.frontmatter}
                 />
               )
             })}
