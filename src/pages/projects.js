@@ -1,5 +1,6 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
+import ProjectCard from "../components/project-card"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -14,24 +15,30 @@ class ProjectsPage extends React.Component {
     return (
       <Layout location={this.props.location} title={siteTitle}>
         <SEO title="Projects" />
-        <div>
-          {projects.map(({ node }) => {
-            const title = node.frontmatter.title || node.fields.slug
-            return (
-              <div key={node.fields.slug}>
-                <h3>
-                  <Link to={`/projects${node.fields.slug}`}>{title}</Link>
-                </h3>
-                <small>{node.frontmatter.date}</small>
-                <p
-                  dangerouslySetInnerHTML={{
-                    __html: node.frontmatter.description || node.excerpt, 
-                  }}
+        <section className="section">
+          <h1 className="has-text-centered is-size-1 mb-4 emphasis">
+            Projects
+          </h1>
+          <h2 className="has-text-centered is-size-5 mb-6">
+            Works, Projects, Commissions and Experiments
+          </h2>
+          <div className="columns is-multiline">
+            {projects.map(({ node }) => {
+              const title = node.frontmatter.title || node.fields.slug
+              // const image = node.frontmatter.ogImage
+              const slug = node.fields.slug
+              const excerpt = node.frontmatter.description || node.excerpt
+              return (
+                <ProjectCard
+                  title={title}
+                  slug={slug}
+                  excerpt={excerpt}
+                  key={slug}
                 />
-              </div>
-            )
-          })}
-        </div>
+              )
+            })}
+          </div>
+        </section>
       </Layout>
     )
   }

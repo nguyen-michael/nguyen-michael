@@ -22,12 +22,12 @@ class Blog extends React.Component {
             const title = node.frontmatter.title || node.fields.slug
             return (
               <div className="columns blog-link" key={node.fields.slug}>
-                <div class="column is-2">
-                  <small>{node.frontmatter.date}</small>
-                </div>
-                <div class="column is-three-fifths">
+                <div className="column is-8">
                   <h3>
-                    <Link to={`/blog${node.fields.slug}`}>{title}</Link>
+                    <p className="is-size-7">{node.frontmatter.date}</p>
+                    <Link className="is-size-5" to={`/blog${node.fields.slug}`}>
+                      {title}
+                    </Link>
                   </h3>
                   <p
                     dangerouslySetInnerHTML={{

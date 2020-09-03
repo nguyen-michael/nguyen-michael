@@ -31,6 +31,10 @@ a {
   background-color: transparent;
 }
 
+.card {
+  height: 100%;
+}
+
 .navbar-menu.is-active {
   position: absolute;
   background-color: transparentize($color: $white, $amount: 0.05);
