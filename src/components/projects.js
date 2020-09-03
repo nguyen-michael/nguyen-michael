@@ -5,29 +5,65 @@ import ProjectCard from "./project-card"
 export default function Projects() {
   const data = useStaticQuery(graphql`
     query ProjectsSectionQuery {
-      markdownRemark(frontmatter: { pageKey: { eq: "index" } }) {
-        frontmatter {
-          projectsTitle
+      allMarkdownRemark(
+        sort: { fields: frontmatter___date, order: DESC }
+        filter: { frontmatter: { pageKey: { eq: "project" } } }
+        limit: 3
+      ) {
+        edges {
+          node {
+            excerpt
+            fields {
+              slug
+            }
+            frontmatter {
+              title
+              description
+              liveUrl
+              repoUrl
+              ogImage {
+                childImageSharp {
+                  fluid(maxWidth: 400) {
+                    ...GatsbyImageSharpFluid
+                  }
+                }
+              }
+            }
+          }
         }
       }
     }
   `)
 
-  const { projectsTitle } = data.markdownRemark.frontmatter
+  const latestProjects = data.allMarkdownRemark.edges
 
   return (
     <section className="section">
       <div className="container fluid">
         <h1 className="has-text-centered is-size-2 has-text-link mb-5">
-          {projectsTitle}{" "}
+          Latest Projects{" "}
           <span className="is-size-6">
-            <Link to="/projects" className="has-text-grey-light">view all</Link>
+            <Link to="/projects" className="has-text-grey-light">
+              view all
+            </Link>
           </span>
         </h1>
         <div className="columns">
-          <ProjectCard />
-          <ProjectCard />
-          <ProjectCard />
+          {latestProjects.map(({ node }) => {
+            const slug = node.fields.slug
+            const title = node.frontmatter.title || node.fields.slug
+            const image = node.frontmatter.ogImage
+            const excerpt = node.frontmatter.description || node.excerpt
+            return (
+              <ProjectCard
+                slug={slug}
+                excerpt={excerpt}
+                title={title}
+                ogImage={image}
+                {...node.frontmatter}
+              />
+            )
+          })}
         </div>
       </div>
     </section>

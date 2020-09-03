@@ -5,7 +5,7 @@ description: There are descriptions for this project on the Internets.
 pageKey: project
 liveUrl: https://nguyenmichael.dev/viet-type-assist/
 repoUrl: https://github.com/nguyen-michael/viet-type-assist
-ogImage: 
+ogImage: "./og-image.png"
 tags: ["vue", "react", "vietnamese"]
 ---
 # Vietnamese Type Assist

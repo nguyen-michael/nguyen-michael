@@ -7,7 +7,6 @@ export default function About() {
     query AboutSectionQuery {
       markdownRemark(frontmatter: { pageKey: { eq: "index" } }) {
         frontmatter {
-          aboutBlurb
           aboutImage {
             childImageSharp {
               fluid(maxWidth: 400) {
@@ -15,19 +14,32 @@ export default function About() {
               }
             }
           }
-          aboutSkills
         }
       }
     }
   `)
 
-  const { aboutBlurb, aboutImage } = data.markdownRemark.frontmatter
+  const { aboutImage } = data.markdownRemark.frontmatter
 
   return (
     <section id="about" className="section">
       <div className="container">
         <div className="columns">
-          <p className="column mr-6">{aboutBlurb}</p>
+          <p className="column mr-6">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit
+            omnis atque eum unde maxime, nisi saepe ex, ab fugiat facere quod
+            inventore molestias quam quis tempora odio, accusamus minima
+            sapiente? Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Suscipit omnis atque eum unde maxime, nisi saepe ex, ab fugiat
+            facere quod inventore molestias quam quis tempora odio, accusamus
+            minima sapiente? Lorem ipsum dolor sit amet consectetur adipisicing
+            elit. Suscipit omnis atque eum unde maxime, nisi saepe ex, ab fugiat
+            facere quod inventore molestias quam quis tempora odio, accusamus
+            minima sapiente? Lorem ipsum dolor sit amet consectetur adipisicing
+            elit. Suscipit omnis atque eum unde maxime, nisi saepe ex, ab fugiat
+            facere quod inventore molestias quam quis tempora odio, accusamus
+            minima sapiente?
+          </p>
           <Img
             className="column is-one-third"
             fluid={aboutImage.childImageSharp.fluid}

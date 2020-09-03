@@ -26,7 +26,8 @@ export default function ProjectCard(props) {
   const title = props.title || "This Project"
   const slug = props.slug || ""
   const excerpt =
-    props.description || props.excerpt ||
+    props.description ||
+    props.excerpt ||
     "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquam est officia qui laudantium eum vel atque eos veritatis, praesentium, enim sit esse quos aspernatur! Debitis numquam optio quis ratione recusandae?"
   const liveUrl = props.liveUrl || "#"
   const repoUrl = props.repoUrl || "#"
@@ -35,8 +36,11 @@ export default function ProjectCard(props) {
     <div className="column is-4">
       <div className="card">
         <div className="card-image">
-          {/* <Img fluid={fluid} alt="Project Image" /> */}
-          <img src={image} alt="project image" />
+          {props.ogImage ? (
+            <Img fluid={image.childImageSharp.fluid} alt="Project Image" />
+          ) : (
+            <img src={image} alt="project image" />
+          )}
         </div>
         <div className="card-content">
           <Link to={`/projects${slug}`}>

@@ -1,5 +1,5 @@
 import React from "react"
-import { Link, graphql } from "gatsby"
+import { graphql } from "gatsby"
 import ProjectCard from "../components/project-card"
 
 import Layout from "../components/layout"
@@ -26,13 +26,14 @@ class ProjectsPage extends React.Component {
             {projects.map(({ node }) => {
               const slug = node.fields.slug
               const title = node.frontmatter.title || node.fields.slug
-              // const image = node.frontmatter.ogImage
+              const image = node.frontmatter.ogImage
               const excerpt = node.frontmatter.description || node.excerpt
               return (
                 <ProjectCard
                   slug={slug}
                   excerpt={excerpt}
                   title={title}
+                  ogImage={image}
                   {...node.frontmatter}
                 />
               )
@@ -47,7 +48,7 @@ class ProjectsPage extends React.Component {
 export default ProjectsPage
 
 export const pageQuery = graphql`
-  query MyQuery {
+  query ProjectsPageQuery {
     site {
       siteMetadata {
         title
@@ -69,6 +70,13 @@ export const pageQuery = graphql`
             description
             liveUrl
             repoUrl
+            ogImage {
+              childImageSharp {
+                fluid(maxWidth: 400) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
           }
         }
       }

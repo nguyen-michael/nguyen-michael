@@ -1,6 +1,6 @@
 ---
 title: The Other Project
-date: 2021-03-20
+date: 2020-08-09
 description: A wheel directory for bicycle wheel company Dirt Bicycle Components. It lists known spoke lengths for various wheel combinations created at the shop. One can organize the wheels in the app and sort it by facets such as model, name, spacing and brake interface.
 pageKey: project
 liveUrl: https://dirt-wheels.herokuapp.com/

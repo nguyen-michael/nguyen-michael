@@ -8,7 +8,6 @@ export default function Hero() {
     query HeroSectionQuery {
       markdownRemark(frontmatter: { pageKey: { eq: "index" } }) {
         frontmatter {
-          heroJobTitle
           heroJumbotron {
             childImageSharp {
               fluid(maxWidth: 2000) {
@@ -16,13 +15,12 @@ export default function Hero() {
               }
             }
           }
-          heroName
         }
       }
     }
   `)
 
-  const { heroName, heroJobTitle, heroJumbotron } = data.markdownRemark.frontmatter
+  const { heroJumbotron } = data.markdownRemark.frontmatter
 
   return (
     <BackgroundImage
@@ -35,9 +33,9 @@ export default function Hero() {
         </div>
         <div className="hero-body has-text-centered">
           <h1 className="is-size-1 mb-4">
-            Howdy! I'm <span className="emphasis">{heroName}</span>{" "}
+            Howdy! I'm <span className="emphasis">Michael Nguyen</span>{" "}
           </h1>
-          <h2 className="is-size-3 mb-2">{heroJobTitle}</h2>
+          <h2 className="is-size-3 mb-2">Small Business Web Developer</h2>
         </div>
         <div className="hero-foot pb-6 has-text-centered">
           <Link to="#about" className="button is-black is-outlined">
