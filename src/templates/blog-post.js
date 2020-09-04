@@ -9,17 +9,19 @@ class BlogPostTemplate extends React.Component {
     const post = this.props.data.markdownRemark
     const siteTitle = this.props.data.site.siteMetadata.title
     const { previous, next } = this.props.pageContext
+    const ogImagePath = post.frontmatter.ogImage ? post.frontmatter.ogImage.childImageSharp.fixed.src : ""
 
     return (
       <Layout location={this.props.location} title={siteTitle}>
         <SEO
           title={post.frontmatter.title}
           description={post.frontmatter.description || post.excerpt}
+          ogImagePath={ogImagePath}
         />
-        <section class="section">
+        <section className="section">
           <h1 className="emphasis is-size-1">{post.frontmatter.title}</h1>
           <p className="is-size-6 mb-4">{post.frontmatter.date}</p>
-          <div class="tags mb-6">
+          <div className="tags mb-6">
             {post.frontmatter.tags.map(tag => {
               return (
                 <Link className="tag is-link" key={tag} to={`/tags/${tag}`}>
@@ -80,6 +82,13 @@ export const pageQuery = graphql`
         date(formatString: "MMMM DD, YYYY")
         description
         tags
+        ogImage {
+          childImageSharp {
+            fixed {
+              src
+            }
+          }
+        }
       }
     }
   }

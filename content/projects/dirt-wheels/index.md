@@ -5,10 +5,10 @@ description: A wheel directory for bicycle wheel company Dirt Bicycle Components
 pageKey: project
 liveUrl: https://dirt-wheels.herokuapp.com/
 repoUrl: https://github.com/nguyen-michael/dirt-wheels
-ogImage: 
+ogImage: "./og-image.png"
 tags: ["bicycle", "react", "mysql"]
 ---
-# Dirt Wheels
+## Dirt Wheels
 
 A wheel directory for bicycle wheel company Dirt Bicycle Components. It lists known spoke lengths for various wheel combinations created at the shop. One can organize the wheels in the app and sort it by facets such as model, name, spacing and brake interface.
 
