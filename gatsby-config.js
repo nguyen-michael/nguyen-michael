@@ -16,6 +16,7 @@ module.exports = {
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-smoothscroll`,
     `gatsby-plugin-sass`,
+    { resolve: `gatsby-plugin-purgecss`, options: { develop: true } },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
