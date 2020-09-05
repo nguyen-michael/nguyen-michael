@@ -13,9 +13,9 @@ export default function Footer() {
         <div className="level-item">
           <Link to="/projects">Projects</Link>
         </div>
-        <div className="level-item">
+{/*         <div className="level-item">
           <Link to="/blog">Blog</Link>
-        </div>
+        </div> */}
         <div className="level-item">
           <Link to="/contact">Contact</Link>
         </div>

@@ -38,9 +38,9 @@ export default function Navbar() {
           <Link to="/projects" className="navbar-item">
             <p className="is-size-4">Projects</p>
           </Link>
-          <Link to="/blog" className="navbar-item">
+{/*           <Link to="/blog" className="navbar-item">
             <p className="is-size-4">Blog</p>
-          </Link>
+          </Link> */}
           <Link to="/contact" className="navbar-item">
             <p className="is-size-4">Contact</p>
           </Link>

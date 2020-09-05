@@ -20,7 +20,7 @@ class ContactPage extends React.Component {
             Let's Get In Touch!
           </h1>
           <div className="columns">
-            <div className="column">
+            {/*             <div className="column">
               <form name="contact">
                 <div className="field">
                   <div className="label">Name</div>
@@ -69,14 +69,18 @@ class ContactPage extends React.Component {
                   </div>
                 </div>
               </form>
-            </div>
+            </div> */}
             <div className="column">
               <div className="container is-size-1">
-                <h2>
+                <h2 className="has-text-centered is-size-1 mb-6">
                   Great partnerships start with a simple message. Shoot me a
                   line,&nbsp;
                   <span className="emphasis">let's talk</span>.
                 </h2>
+                <h3 className="has-text-centered is-size-2">
+                  howdy<span className="has-text-weight-bold emphasis">@</span>
+                  nguyenmichael.dev
+                </h3>
               </div>
             </div>
           </div>
