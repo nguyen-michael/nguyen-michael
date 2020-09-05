@@ -9,7 +9,7 @@ export default function About() {
         frontmatter {
           aboutImage {
             childImageSharp {
-              fluid(maxWidth: 400) {
+              fluid(maxWidth: 400, quality: 85) {
                 ...GatsbyImageSharpFluid
               }
             }

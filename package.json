@@ -47,9 +47,9 @@
   "devDependencies": {
     "prettier": "^1.17.0"
   },
-  "homepage": "https://github.com/gatsbyjs/gatsby-starter-blog#readme",
+  "homepage": "https://www.nguyenmichael.dev",
   "keywords": [
-    "gatsby"
+    "gatsby", "personal site", "devblog"
   ],
   "license": "MIT",
   "main": "n/a",

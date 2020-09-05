@@ -10,7 +10,7 @@ export default function Hero() {
         frontmatter {
           heroJumbotron {
             childImageSharp {
-              fluid(maxWidth: 2000) {
+              fluid(maxWidth: 2000, quality: 85) {
                 ...GatsbyImageSharpFluid
               }
             }

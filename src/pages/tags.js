@@ -20,7 +20,11 @@ class TagsPage extends React.Component {
               const count = group.totalCount
 
               return (
-                <Link to={`/tags/${tag}`} className="tag is-link is-large">
+                <Link
+                  to={`/tags/${tag}`}
+                  className="tag is-link is-large"
+                  key={tag}
+                >
                   {tag} ({count})
                 </Link>
               )
