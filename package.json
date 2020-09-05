@@ -45,11 +45,14 @@
     "typography-theme-alton": "^0.16.19"
   },
   "devDependencies": {
+    "gh-pages": "^3.1.0",
     "prettier": "^1.17.0"
   },
   "homepage": "https://www.nguyenmichael.dev",
   "keywords": [
-    "gatsby", "personal site", "devblog"
+    "gatsby",
+    "personal site",
+    "devblog"
   ],
   "license": "MIT",
   "main": "n/a",
@@ -63,6 +66,7 @@
     "format": "prettier --write src/**/*.{js,jsx}",
     "start": "npm run develop",
     "serve": "gatsby serve",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\""
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\"",
+    "deploy": "gatsby build && gh-pages -d public -b master"
   }
 }
