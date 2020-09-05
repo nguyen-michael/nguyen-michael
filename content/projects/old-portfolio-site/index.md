@@ -6,7 +6,7 @@ pageKey: project
 liveUrl: https://nguyenmichael.dev/old-portfolio
 repoUrl: https://github.com/nguyen-michael/old-portfolio
 ogImage: "./og-image.png"
-tags: ["portfolio", "react", "mysql"]
+tags: ["portfolio", "react", "mysql", "mdx"]
 ---
 
 ## Getting reaccustomed to HTML and CSS

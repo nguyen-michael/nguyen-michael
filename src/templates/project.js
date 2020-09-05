@@ -8,7 +8,10 @@ class ProjectTemplate extends React.Component {
   render() {
     const project = this.props.data.markdownRemark
     const siteTitle = this.props.data.site.siteMetadata.title
-    const ogImagePath = project.frontmatter.ogImage ? project.frontmatter.ogImage.childImageSharp.fixed.src : ""
+    const ogImagePath = project.frontmatter.ogImage
+      ? project.frontmatter.ogImage.childImageSharp.fixed.src
+      : ""
+    const { repoUrl, liveUrl } = project.frontmatter
 
     return (
       <Layout location={this.props.location} title={siteTitle}>
@@ -30,12 +33,16 @@ class ProjectTemplate extends React.Component {
             })}
           </div>
           <div className="buttons">
-            <a className="button mr-1" href={project.frontmatter.repoUrl}>
-              Github
-            </a>
-            <a className="button" href={project.frontmatter.liveUrl}>
-              Live
-            </a>
+            {repoUrl && (
+              <a className="button mr-1" href={repoUrl}>
+                Github
+              </a>
+            )}
+            {liveUrl && (
+              <a className="button" href={liveUrl}>
+                Live
+              </a>
+            )}
           </div>
           <section dangerouslySetInnerHTML={{ __html: project.html }} />
           <hr />

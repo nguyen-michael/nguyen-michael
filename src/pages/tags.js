@@ -12,17 +12,21 @@ class TagsPage extends React.Component {
     return (
       <Layout location={this.props.location} title={siteTitle}>
         <SEO title="Tags" />
-        <h1>Tags</h1>
-        {allMarkdownRemark.group.map(group => {
-          const tag = group.fieldValue
-          const count = group.totalCount
+        <section className="section">
+          <h1 className="has-text-centered is-size-1 mb-4 emphasis">Tags</h1>
+          <div className="tags">
+            {allMarkdownRemark.group.map(group => {
+              const tag = group.fieldValue
+              const count = group.totalCount
 
-          return (
-            <div key={tag}>
-              <Link to={`/tags/${tag}`}>{tag} ({count})</Link>
-            </div>
-          )
-        })}
+              return (
+                <Link to={`/tags/${tag}`} className="tag is-link is-large">
+                  {tag} ({count})
+                </Link>
+              )
+            })}
+          </div>
+        </section>
       </Layout>
     )
   }

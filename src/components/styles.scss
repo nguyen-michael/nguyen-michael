@@ -71,6 +71,7 @@ a {
 .layout-bounding {
   margin: 0 auto;
   max-width: 1000px;
+  width: 100%;
 }
 
 .layout-wrapper {
@@ -91,6 +92,10 @@ a {
 
 .blog-link:hover {
   background-color: darken($white, 5);
+}
+
+h3 + .blog-link {
+  border-top: none !important;
 }
 
 .tag {

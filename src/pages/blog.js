@@ -38,7 +38,11 @@ class Blog extends React.Component {
                 <div className="column tags">
                   {node.frontmatter.tags.map(tag => {
                     return (
-                      <Link to={`/tags/${tag}`} className="tag is-link">
+                      <Link
+                        to={`/tags/${tag}`}
+                        className="tag is-link"
+                        key={tag}
+                      >
                         {tag}
                       </Link>
                     )
