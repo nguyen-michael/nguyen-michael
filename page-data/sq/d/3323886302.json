@@ -1,1 +1,0 @@
-{"errors":[{"message":"Cannot return null for non-nullable field ImageSharpFluid.aspectRatio.","locations":[{"line":3,"column":3}],"path":["markdownRemark","frontmatter","aboutImage","childImageSharp","fluid","aspectRatio"]}],"data":{"markdownRemark":{"frontmatter":{"aboutImage":{"childImageSharp":{"fluid":null}}}}}}
