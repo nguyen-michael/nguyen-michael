@@ -22,12 +22,12 @@ export default function Footer() {
       </div>
       <div className="level is-size-3">
         <div className="level-item">
-          <a href="https://github.com/nguyen-michael">
+          <a href="https://github.com/nguyen-michael" aria-label="nguyen-michael Github">
             <FontAwesomeIcon icon={faGithubSquare} />
           </a>
         </div>
         <div className="level-item">
-          <a href="https://www.linkedin.com/in/nguyen-michael/">
+          <a href="https://www.linkedin.com/in/nguyen-michael/" aria-label="Michael Nguyen LinkedIn">
             <FontAwesomeIcon icon={faLinkedin} />
           </a>
         </div>
