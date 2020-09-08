@@ -9,6 +9,7 @@ import React from "react"
 import PropTypes from "prop-types"
 import Helmet from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
+import defaultOgImage from "../../content/assets/og-default.png"
 
 function SEO({ description, lang, meta, keywords, title, ogImagePath }) {
   const { site } = useStaticQuery(
@@ -26,7 +27,7 @@ function SEO({ description, lang, meta, keywords, title, ogImagePath }) {
   )
 
   const metaDescription = description || site.siteMetadata.description
-  const image = ogImagePath || null
+  const image = ogImagePath || defaultOgImage
 
   return (
     <Helmet
