@@ -82,7 +82,8 @@ a {
   justify-content: space-between;
 }
 
-.blog-link, .card-content {
+.blog-link,
+.card-content {
   transition: background-color 0.2s ease;
 }
 
@@ -90,7 +91,8 @@ a {
   border-top: 1px solid $green;
 }
 
-.blog-link:hover, .card-content:hover {
+.blog-link:hover,
+.card-content:hover {
   background-color: darken($white, 3);
 }
 
