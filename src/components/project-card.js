@@ -10,8 +10,8 @@ export default function ProjectCard(props) {
     props.description ||
     props.excerpt ||
     "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquam est officia qui laudantium eum vel atque eos veritatis, praesentium, enim sit esse quos aspernatur! Debitis numquam optio quis ratione recusandae?"
-  const liveUrl = props.liveUrl || "#"
-  const repoUrl = props.repoUrl || "#"
+  const liveUrl = props.liveUrl
+  const repoUrl = props.repoUrl
 
   return (
     <div className="column is-4">
@@ -30,12 +30,16 @@ export default function ProjectCard(props) {
           <p className="mb-2">{excerpt}</p>
         </div>
         <footer className="card-footer has-text-centered">
-          <a className="card-footer-item" href={repoUrl}>
-            Github
-          </a>
-          <a className="card-footer-item" href={liveUrl}>
-            Live
-          </a>
+          {repoUrl && (
+            <a className="card-footer-item" href={repoUrl}>
+              Github
+            </a>
+          )}
+          {liveUrl && (
+            <a className="card-footer-item" href={liveUrl}>
+              Live
+            </a>
+          )}
         </footer>
       </div>
     </div>
