@@ -16,7 +16,7 @@ module.exports = {
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-smoothscroll`,
     `gatsby-plugin-sass`,
-    { resolve: `gatsby-plugin-purgecss`, options: { develop: true } },
+    { resolve: `gatsby-plugin-purgecss`, options: { develop: false } },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -52,7 +52,8 @@ module.exports = {
           {
             resolve: `gatsby-remark-images`,
             options: {
-              maxWidth: 590,
+              maxWidth: 650,
+              quality: 80,
             },
           },
           {

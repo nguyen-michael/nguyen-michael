@@ -1,5 +1,5 @@
 import React from "react"
-import { Link, useStaticQuery, graphql } from "gatsby"
+import { useStaticQuery, graphql } from "gatsby"
 import ProjectCard from "./project-card"
 
 export default function Projects() {
@@ -41,12 +41,7 @@ export default function Projects() {
     <section className="section">
       <div className="container fluid">
         <h1 className="has-text-centered is-size-2 has-text-link mb-5">
-          Latest Projects{" "}
-          <span className="is-size-6">
-            <Link to="/projects" className="has-text-grey-light">
-              view all
-            </Link>
-          </span>
+          Latest Projects
         </h1>
         <div className="columns">
           {latestProjects.map(({ node }) => {
