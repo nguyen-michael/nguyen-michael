@@ -12,7 +12,7 @@ module.exports = {
   plugins: [
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
-    `gatsby-plugin-offline`,
+    `gatsby-plugin-remove-serviceworker`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-smoothscroll`,
     `gatsby-plugin-sass`,
@@ -97,6 +97,7 @@ module.exports = {
       resolve: `gatsby-plugin-typography`,
       options: {
         pathToConfigModule: `src/utils/typography`,
+        omitGoogleFont: true,
       },
     },
   ],
