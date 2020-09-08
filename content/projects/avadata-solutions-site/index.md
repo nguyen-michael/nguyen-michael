@@ -11,7 +11,7 @@ tags: ["gatsby", "react", "netlify", "business-site", "website"]
 
 Built in Gatsby and based on the Gatsby Netlify CMS Starter, I created this clean, fast website for AvaData Solutions, Inc., a small business analytics firm based out of Houston.
 
-![Screenshot of site](./screenshot.webp)
+![Screenshot of site](./screenshot.png)
 
 ## Usage
 

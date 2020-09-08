@@ -11,7 +11,7 @@ export default function Hero() {
           heroJumbotron {
             childImageSharp {
               fluid(maxWidth: 2000, quality: 85) {
-                ...GatsbyImageSharpFluid
+                ...GatsbyImageSharpFluid_withWebp
               }
             }
           }

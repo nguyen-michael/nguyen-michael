@@ -10,7 +10,7 @@ export default function About() {
           aboutImage {
             childImageSharp {
               fluid(maxWidth: 400, quality: 85) {
-                ...GatsbyImageSharpFluid
+                ...GatsbyImageSharpFluid_withWebp
               }
             }
           }
