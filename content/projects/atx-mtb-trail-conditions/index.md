@@ -19,8 +19,17 @@ This is an app to crowd-source trail conditions in the Austin area. Trail condit
 
 ## Technologies Used
 
-[Svelte](https://svelte.dev/)
+- [Svelte](https://svelte.dev/)
+- [Lunacy](https://icons8.com/lunacy)
+- [Firebase](https://firebase.google.com/)
 
 ## Story
 
 In the mountain biking community, at least in Austin, Texas, there's that will put a damper on the local's enjoyment of the trails than a good dose of trail-soaking rain. The volunteer-built trails in the area get damaged from use when wet due to the soil quality in Central Texas. To allieviate these issues, the community posts on an online forum with their reports of trail conditions. This can be handy but accessing the info might require scrolling through posts. I created this app to have a single place to update the conditions.
+
+## Design
+
+I used Lunacy, a sort of Sketch but for Windows created by Icons8. It's a fantastic tool for mocking up interfaces. I've got some years of Photoshop and Illustrator tomfoolery under my belt from high school and I'm glad the semantics of the shortcuts and tooling are about the same then as they are now. I was able to get started mocking up a design for this app relatively quick. Though I hadn't much adhered to the aesthetics in the live app, there's certainly room for improvement on the styling.
+
+| ![Main Page Design](./main-screen.png) | ![Opened Trail Tabs](./opened-trails.png) |
+|---|---|

@@ -36,6 +36,8 @@ Features and tricks I found handy include:
         </ul>
   </nav>
   ```
+<br/>
+
 * CSS Variables
   * Setting some basic theme colors then invoking them in the styling allows easy swap of theme and colors!
   ```css
@@ -51,20 +53,20 @@ Features and tricks I found handy include:
   }
   body, html {
     background-color: var(--lighter-color);
-    ...
+  ...
   ```
+<br/>
+
 * Styling the scrollbar
   * I didn't even consider the possibility until I saw a different looking scroll bar on another website. A quick search shows the possibility on W3C Schools
-
   ```css
   ...
   ::-webkit-scrollbar-track {
-  background: var(--lighter-color);
+    background: var(--lighter-color);
   }
-
   ::-webkit-scrollbar-thumb {
-  background: var(--main-text-color);
-  border-radius: 1px;
+    background: var(--main-text-color);
+    border-radius: 1px;
   }
   ...
   ```
