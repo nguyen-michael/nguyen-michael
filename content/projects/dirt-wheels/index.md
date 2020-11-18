@@ -3,7 +3,7 @@ title: Dirt Bicycle Components Wheel Directory
 date: 2020-03-14
 description: A wheel directory for bicycle wheel company Dirt Bicycle Components. 
 pageKey: project
-liveUrl: https://dirt-wheels.herokuapp.com/
+liveUrl:
 repoUrl: https://github.com/nguyen-michael/dirt-wheels
 ogImage: "./og-image.png"
 tags: ["bicycle", "react", "mysql"]
